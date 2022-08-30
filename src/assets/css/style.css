@@ -1,0 +1,149 @@
+:root {
+    font-size: 62.5%;
+    --grey: #666;
+    --light-grey: #e6e6e6;
+    --white: #fff;
+    --background-color: #f2f7f8;
+    --primary-color: #0000cd;
+    --light-primary-color: #5555ba;
+    --secondary-color: #0066fe;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--background-color);
+    font-family: Poppins, Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+
+/* FLEXBOX-GRID */
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.column {
+    flex-basis: auto;
+}
+
+/* CARDS */
+.card {
+    background: var(--white);
+    border-radius: 5px;
+    padding: 10px 20px;
+}
+
+/* INPUTS */
+.input-wrapper {
+    color: var(--grey);
+    font-size: 1.5rem;
+    height: 50px;
+    margin-bottom: 10px;
+    position: relative;
+    width: 100%;
+}
+
+.input {
+    background: var(--light-grey);
+    border-radius: 30px;
+    border: none;
+    color: var(--grey);
+    font-family: inherit;
+    outline: none;
+    padding: 15px 60px;
+    width: 100%; 
+}
+
+.input:focus {
+    border: 2px solid var(--light-primary-color);
+}
+
+.input:focus + .input__icon {
+    color: var(--primary-color);
+    left: 25px;
+    transition: all 0.4s;
+}
+
+.input__icon {
+    align-self: center;
+    left: 28px;
+    margin-right: 20px;
+    position: absolute;
+    top: 17px;
+    transition: all 0.4s;
+}
+
+.input__btn {
+    display: block;
+}
+
+
+/* BUTTONS */
+.btn {
+    border-radius: 30px;
+    border: none;
+    color: var(--white);
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 12px 0;
+    text-transform: uppercase;
+}
+
+.btn--primary {
+    background: #0000cd;
+}
+
+.btn--primary:hover,
+.btn--primary:focus {
+    background: var(--secondary-color);
+    transition: background 0.3s;
+}
+
+/* LOGIN */
+.login-wrapper {
+    align-items: center;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    width: 100%;
+}
+
+.row.login {
+    justify-content: space-between;
+    padding: 160px 100px;
+    width: 920px;
+}
+
+.login__image {
+    width: 315px;
+}
+
+.login__title {
+    display: block;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 55px;
+    text-align: center;
+}
+
+.login__form-wrapper {
+    width: 290px;
+}
+
+.login__form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.login__btn {
+    margin-top: 20px;
+    outline: none;
+    width: 100%;
+}
