@@ -3,6 +3,8 @@
     --grey: #666;
     --light-grey: #e6e6e6;
     --white: #fff;
+    --danger-color: #c82333;
+    --light-danger-color: #f1b0b7;
     --background-color: #f2f7f8;
     --primary-color: #0000cd;
     --light-primary-color: #5555ba;
@@ -54,8 +56,12 @@ body {
     color: var(--grey);
     font-family: inherit;
     outline: none;
-    padding: 15px 60px;
+    padding: 15px 30px 15px 60px;
     width: 100%; 
+}
+
+.input-wrapper.error {
+    border: 1px solid red;
 }
 
 .input:focus {
@@ -81,6 +87,24 @@ body {
     display: block;
 }
 
+.input-wrapper--error {
+    color: var(--danger-color);
+    height: auto;
+}
+
+.input-wrapper--error .input {
+    border: 3px solid var(--light-danger-color);
+}
+
+.input-wrapper--error .input + .input__icon {
+    color: var(--danger-color);
+}
+
+.input__error-message {
+    display: block;
+    font-size: 15px;
+    padding-left: 30px;
+}
 
 /* BUTTONS */
 .btn {
