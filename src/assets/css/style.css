@@ -171,3 +171,60 @@ body {
     outline: none;
     width: 100%;
 }
+
+/* COLLAPSIBLE */
+.collapsible {
+    overflow: hidden;
+}
+
+.collapsible--expanded .collapsible__items {
+    max-height: 100vh;
+    opacity: 1;
+    transition: all 0.4s;
+}
+.collapsible__items {
+    max-height: 0;
+    opacity: 0;
+    transition: all 0.4s;
+}
+
+/* SIDEBAR */
+.sidebar {
+    background: var(--white);
+    float: left;
+    height: 100vh;
+    width: 280px;
+}
+
+.sidebar__items {
+    list-style: none;
+    padding-left: 0;
+}
+
+.sidebar__item {
+    align-items: center;
+    border-left: 3px solid transparent;
+    color: #54467a;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 15px;
+    padding: 14px 35px 14px 15px;
+    text-decoration: none;
+    transition: all 0.4s;
+    width: 280px; /* FIX IT */
+}
+
+.sidebar__icon {
+    margin-right: 10px;
+}
+
+.sidebar__item .collapsible__icon {
+    margin-left: auto;
+}
+
+.sidebar__item.active,
+.sidebar__item:hover {
+    background: var(--background-color);
+    border-left: 3px solid var(--primary-color);
+    color: var(--primary-color);
+}
