@@ -1,10 +1,9 @@
 import React from 'react';
 
 
-const SidebarItem = ({ Icon, key, label, link }) => {
+const SidebarItem = ({ Icon, label, link }) => {
     return (
         <li
-            key={key}
             className='sidebar__item-wrapper'>
             <a href={link} className='sidebar__item'>
                 <Icon className='sidebar__icon' />

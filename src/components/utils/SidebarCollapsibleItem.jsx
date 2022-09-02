@@ -3,7 +3,7 @@ import { FiMenu } from 'react-icons/fi';
 import SidebarItem from './SidebarItem';
 
 
-const SidebarCollapsibleItem = ({ key, label, Icon, subItems }) => {
+const SidebarCollapsibleItem = ({ label, Icon, subItems }) => {
     const ref = React.createRef();
 
     const handleCollapse = ({ current }) => {
@@ -14,7 +14,7 @@ const SidebarCollapsibleItem = ({ key, label, Icon, subItems }) => {
     }
 
     return (
-        <li key={key} className='sidebar__item-wrapper'>
+        <li className='sidebar__item-wrapper'>
             <div ref={ref} className='sidebar__item collapsible' onClick={() => handleCollapse(ref)}>
                 <Icon className='sidebar__icon' />
                 {label}
